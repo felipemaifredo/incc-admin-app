@@ -11,6 +11,7 @@ import { DefaultLayout } from "./ui/layouts/DefaultLayout"
 import { Login } from "./ui/pages/Login"
 import { HomeAdm } from "./ui/pages/HomeAdm"
 import { DoctorsPage } from "./ui/pages/DoctorsPage"
+import { ProductsPage } from "./ui/pages/ProductsPage"
 
 export function App() {
   const [loggedIn, setLoggedIn] = useState(false)
@@ -39,7 +40,7 @@ export function App() {
           <Route path="/admin" element={( loggedIn ? <HomeAdm /> : <Navigate to="/login" /> )} />
           <Route path="/admin/artigos" element={( loggedIn ? <HomeAdm /> : <Navigate to="/login" /> )} />
           <Route path="/admin/medicos" element={( loggedIn ? <DoctorsPage /> : <Navigate to="/login" /> )} />
-          <Route path="/admin/produtos" element={( loggedIn ? <HomeAdm /> : <Navigate to="/login" /> )} />
+          <Route path="/admin/produtos" element={( loggedIn ? <ProductsPage /> : <Navigate to="/login" /> )} />
         </Route>
       </Routes>
     </HashRouter>

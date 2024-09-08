@@ -1,5 +1,6 @@
 .div_adm {
     min-height: 100vh;
+    padding: 150px 0;
     width: 100vw;
     background: var(--c-linear-gradient-orange-to-orange);
     display: flex;
@@ -7,6 +8,15 @@
     justify-content: center;
     flex-wrap: wrap;
     gap: 20px;
+
+    & .container_items {
+        display: flex; 
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        row-gap: 20px;
+    }
 }
 
 .add_btn {
@@ -45,6 +55,7 @@
         height: 40px;
         border: none;
         background-color: #e8f0fe;
+        border-radius: 5px;
 
         &:focus {
             outline: none;
@@ -57,6 +68,7 @@
         height: 70px;
         border: none;
         background-color: #e8f0fe;
+        border-radius: 5px;
 
         &:focus {
             outline: none;
@@ -69,9 +81,69 @@
 
     & > .box_position {
         display: flex;
+        gap: 10px;
     }
 
     & > button {
+        border-radius: 5px;
         height: 50px;
+        cursor: pointer;
     }
 }
+
+/* */
+
+.item_container_doctors {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    width: 95%;
+    max-width: 600px;
+    padding: 10px;
+    height: 100%;
+    background-color: #fff;
+    border-radius: 10px;
+
+    & > .btn_container {
+        width: 40px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+
+        & .btn_acction_adm {
+            display: grid;
+            place-items: center;
+            height: 25x;
+            width: 25px;
+            cursor: pointer;
+
+            & > svg {
+                color: #e54e26;
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+}
+
+.data_doc {
+    height: 100%;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 20px;
+
+    & > .name {
+        font-size: 3.5rem;
+
+    }
+}
+
+
+
+
+/* */

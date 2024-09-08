@@ -15,7 +15,7 @@ import { fetchUpdateData } from "../../lib/fetchUpdateData"
 import { FaRegTrashAlt } from "react-icons/fa"
 import { FaPencilAlt } from "react-icons/fa"
 
-const collectionName = "doctors"
+const collectionName = "products"
 
 const initalStateFormData = {
     position: "1",
@@ -93,7 +93,7 @@ const FormAddDoctors = ({ onClose, revalidateData }) => {
 
     return (
         <form className="form_admin" onSubmit={handleSubmit}>
-            <h2>Criar novo médico</h2>
+            <h2>Criar novo produto</h2>
             <input
                 type="text"
                 placeholder="Nome"
@@ -255,7 +255,7 @@ const EditItem = ({ id, revalidateData }) => {
     )
 }
 
-export const DoctorsPage = () => {
+export const ProductsPage = () => {
     const [isModalOpen, setIsModalOpen] = useState(false)
     const [docsData, setDocsData] = useState([])
     const [ att, setAtt ] = useState(false)
