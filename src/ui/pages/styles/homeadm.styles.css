@@ -1,0 +1,36 @@
+.home-adm {
+    min-height: 100vh;
+    width: 100vw;
+    background: var(--c-linear-gradient-orange-to-orange);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.home-adm a {
+    width: 200px;
+    height: 200px;
+    border: 2px solid var(--c-white);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    text-decoration: none;
+    color: var(--c-white);
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    transition: all .2s;
+
+    &:hover {
+        transform: scale(1.1);
+    }
+}
+
+.home-adm a svg{
+    width: 50%;
+    height: 50%;
+}

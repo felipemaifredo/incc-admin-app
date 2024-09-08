@@ -1,25 +1,46 @@
-import logo from './logo.svg';
-import './App.css';
+//Imports
+import { Route, Routes, Navigate, HashRouter } from "react-router-dom"
+import { useState, useEffect } from "react"
+import { auth } from "./FirebaseConfig"
 
-function App() {
+//Layouts
+import { DefaultAdminLayout } from "./ui/layouts/DefaultAdminLayout"
+import { DefaultLayout } from "./ui/layouts/DefaultLayout"
+
+//Pages
+import { Login } from "./ui/pages/Login"
+import { HomeAdm } from "./ui/pages/HomeAdm"
+
+export function App() {
+  const [loggedIn, setLoggedIn] = useState(false)
+
+  useEffect(() => {
+    auth.onAuthStateChanged((user) => {
+      if (user) {
+        handleLoggin()
+      } else {
+        setLoggedIn(false)
+      }
+    })
+  }, [loggedIn])
+
+  function handleLoggin() {
+    setLoggedIn(true)
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <HashRouter>
+      <Routes>
+        <Route path="/" element={<DefaultLayout />}>
+          <Route path="/login" element={<Login handleLoggin={handleLoggin} />} />
+        </Route>
+        <Route path="/admin" element={<DefaultAdminLayout />}>
+          <Route path="/admin" element={( loggedIn ? <HomeAdm /> : <Navigate to="/login" /> )} />
+          <Route path="/admin/artigos" element={( loggedIn ? <HomeAdm /> : <Navigate to="/login" /> )} />
+          <Route path="/admin/medicos" element={( loggedIn ? <HomeAdm /> : <Navigate to="/login" /> )} />
+          <Route path="/admin/produtos" element={( loggedIn ? <HomeAdm /> : <Navigate to="/login" /> )} />
+        </Route>
+      </Routes>
+    </HashRouter>
+  )
 }
-
-export default App;

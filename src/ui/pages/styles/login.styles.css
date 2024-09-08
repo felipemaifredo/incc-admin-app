@@ -1,0 +1,59 @@
+.login-div {
+    min-height: 100vh;
+    width: 100vw;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab) no-repeat;
+    background-size: 1000% 1000%;
+    animation: gradient 7s ease alternate infinite;
+    display: grid;
+    place-items: center;
+}
+
+@keyframes gradient {
+    from {
+        background-position: 0 50%;
+    }
+
+    to {
+        background-position: 100% 50%;
+    }
+}
+
+.login-div form{
+    height: 350px;
+    width: 400px;
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    background-color: var(--c-white);
+}
+
+.login-div input {
+    width: 90%;
+    height: 50px;
+    padding-left: 10px;
+    outline: none;
+    border: none;
+    font-size: 1rem;
+    background-color: #f2f2f2;
+    border-radius: 5px;
+    
+    &:focus {
+        outline: 1px solid var(--c-orange);
+    }
+}
+
+.login-div button {
+    width: 90%;
+    height: 50px;
+    background: var(--c-linear-gradient-orange-to-orange);
+    border: none;
+    color: var(--c-white);
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+}
