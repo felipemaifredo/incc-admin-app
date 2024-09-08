@@ -1,11 +1,13 @@
 import "./styles/homeadm.styles.css"
-import { Link } from "react-router-dom"
 import { GrArticle } from "react-icons/gr"
 import { FaUserDoctor } from "react-icons/fa6"
 import { FaProductHunt } from "react-icons/fa"
+
 import { ButtonCenter } from "../components/ButtonCenter"
+import { Link } from "react-router-dom"
 
 export function HomeAdm() {
+    document.title = "INCC Administração"
     return (
         <>
             <ButtonCenter

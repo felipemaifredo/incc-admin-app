@@ -1,0 +1,77 @@
+.div_adm {
+    min-height: 100vh;
+    width: 100vw;
+    background: var(--c-linear-gradient-orange-to-orange);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.add_btn {
+    position: absolute;
+    top: 70px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    border-radius: 5px;
+    border: none;
+    font-weight: 600;
+
+    & > svg {
+        height: 25px;
+        width: 25px;
+    }
+
+    &:hover {
+        background-color: #d1d1d1;
+    }
+}
+
+/* */
+
+.form_admin {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 50px 0;
+
+    & > input {
+        padding: 5px;
+        padding: 10px;
+        height: 40px;
+        border: none;
+        background-color: #e8f0fe;
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    & > textarea {
+        padding: 5px;
+        padding: 10px;
+        height: 70px;
+        border: none;
+        background-color: #e8f0fe;
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    & .input_file {
+        display: none;
+    }
+
+    & > .box_position {
+        display: flex;
+    }
+
+    & > button {
+        height: 50px;
+    }
+}
