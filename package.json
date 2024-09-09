@@ -1,5 +1,6 @@
 {
   "name": "incc-admin-app",
+  "homepage": "https://felipemaifredo.github.io/incc-admin-app",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
