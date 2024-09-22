@@ -12,6 +12,9 @@ import { Login } from "./ui/pages/Login"
 import { HomeAdm } from "./ui/pages/HomeAdm"
 import { DoctorsPage } from "./ui/pages/DoctorsPage"
 import { ProductsPage } from "./ui/pages/ProductsPage"
+import { ArtiglesPage } from "./ui/pages/ArtiglesPage"
+import { NewArtiglesPage } from "./ui/pages/NewArtiglesPage"
+import { EditArticlePage } from "./ui/pages/EditArticlePage"
 
 export function App() {
   const [loggedIn, setLoggedIn] = useState(false)
@@ -38,7 +41,9 @@ export function App() {
         </Route>
         <Route path="/admin" element={<DefaultAdminLayout />}>
           <Route path="/admin" element={( loggedIn ? <HomeAdm /> : <Navigate to="/login" /> )} />
-          <Route path="/admin/artigos" element={( loggedIn ? <HomeAdm /> : <Navigate to="/login" /> )} />
+          <Route path="/admin/artigos" element={( loggedIn ? <ArtiglesPage /> : <Navigate to="/login" /> )} />
+          <Route path="/admin/artigos/novo" element={( loggedIn ? <NewArtiglesPage /> : <Navigate to="/login" /> )} />
+          <Route path="/admin/artigos/editar/:id" element={( loggedIn ? <EditArticlePage /> : <Navigate to="/login" /> )} />
           <Route path="/admin/medicos" element={( loggedIn ? <DoctorsPage /> : <Navigate to="/login" /> )} />
           <Route path="/admin/produtos" element={( loggedIn ? <ProductsPage /> : <Navigate to="/login" /> )} />
         </Route>
