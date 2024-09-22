@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/incc-admin-app/static/css/main.9d0ccfbf.css",
-    "main.js": "/incc-admin-app/static/js/main.d9976efc.js",
-    "static/js/453.e1f1d347.chunk.js": "/incc-admin-app/static/js/453.e1f1d347.chunk.js",
+    "main.css": "/incc-admin-app/static/css/main.d9d0b3fa.css",
+    "main.js": "/incc-admin-app/static/js/main.6b99b7f4.js",
+    "static/js/453.51054fbc.chunk.js": "/incc-admin-app/static/js/453.51054fbc.chunk.js",
     "static/media/logo_completa.webp": "/incc-admin-app/static/media/logo_completa.d2ab6e5b6ec93f124542.webp",
     "index.html": "/incc-admin-app/index.html",
-    "main.9d0ccfbf.css.map": "/incc-admin-app/static/css/main.9d0ccfbf.css.map",
-    "main.d9976efc.js.map": "/incc-admin-app/static/js/main.d9976efc.js.map",
-    "453.e1f1d347.chunk.js.map": "/incc-admin-app/static/js/453.e1f1d347.chunk.js.map"
+    "main.d9d0b3fa.css.map": "/incc-admin-app/static/css/main.d9d0b3fa.css.map",
+    "main.6b99b7f4.js.map": "/incc-admin-app/static/js/main.6b99b7f4.js.map",
+    "453.51054fbc.chunk.js.map": "/incc-admin-app/static/js/453.51054fbc.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.9d0ccfbf.css",
-    "static/js/main.d9976efc.js"
+    "static/css/main.d9d0b3fa.css",
+    "static/js/main.6b99b7f4.js"
   ]
 }
